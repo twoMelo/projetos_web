@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: "lexand";
-    src: url(ECOCICLO-main/font/Lexend-VariableFont_wght.ttf);
+    src: url(font/Lexend-VariableFont_wght.ttf);
 }
 header {
     background-image: url(img/fundo.png);
