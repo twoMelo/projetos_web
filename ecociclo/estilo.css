@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "lexand";
+    src: url(ECOCICLO-main/font/Lexend-VariableFont_wght.ttf);
+}
+header {
+    background-image: url(ECOCICLO-main/img/fundo.png);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+.logo {
+    font-family: "lexand";
+    font-size: 90px;
+    font-weight: 500px;
+
+}
+.slogan {
+    font-family: "lexand";
+    font-size: 30px;
+}
+.nossoProcesso {
+        background-color: #598C38;
+}
+.processo img{
+    width: 400px;
+}
+.processo{
+    width: 400px;
+    background-color: white ;
+    border-radius: 20px;
+    margin: 30px;
+}
+.container{
+    display: flex;
+    justify-content: center;   
+}
+.titulo {
+    font-family: "lexand";
+    font-size: 60px;
+    color: white;
+    padding: 100px;
+    font-weight: 500;
+}
+.texto{
+    font-family: "lexand";
+    font-size: 20px;
+    padding: 5px 7px;
+}
+.SobreNós .titulo{
+    padding-left: 0px;
+    color: black;
+}
+.SobreNós {
+    margin: 0 100px ;
+}
+h3{
+    font-family: "lexand";
+    font-size: 30px;
+    color: darkgreen;
+}
+footer {
+background-color: darkgreen;
+color: white;
+padding: 0 100px;
+font-size: 24px;
+}
+.contato{
+    color: white;
+    padding: 0 100px;
+    font-size: 36px;
+}
