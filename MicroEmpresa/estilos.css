@@ -1,43 +1,39 @@
-/* Estilo do cabeçalho */
 header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.76);
     color: white;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo do cabeçalho */
+    justify-content: center;
     padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%; /* Ajusta a largura do cabeçalho para ocupar toda a largura disponível */
-    box-sizing: border-box; /* Inclui o padding na largura total do cabeçalho */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Estilo do corpo da página */
 body {
-    background-color: rgb(55, 85, 110); /* Altere a cor de fundo */
+    background-color: rgba(58, 58, 58, 0.295); 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; 
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Estilo do título principal */
+
 h1 {
     color: white;
     display: flex;
-    justify-content: center; /* Centraliza o título horizontalmente */
+    justify-content: center; 
 }
-
-/* Estilo do banner */
 .banner {
     display: flex;
-    justify-content: center; /* Centraliza o banner horizontalmente */
+    justify-content: center; 
+    border-radius: 20px;
 }
 
-/* Estilo dos itens da lista no menu de navegação */
 ul {
     display: flex;
-    justify-content: center; /* Centraliza a lista horizontalmente */
+    justify-content: center; 
     padding: 0;
     margin: 0;
     list-style: none;
@@ -45,90 +41,118 @@ ul {
 
 nav li {
     display: inline;
-    color: white; /* Altere a cor do texto dos itens do menu */
+    color: white; 
     padding-right: 50px;
 }
 
 nav li a {
-    color: white; /* Define a cor dos links como branca */
-    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; 
+    text-decoration: none; 
 }
 
 nav li a:hover {
-    color: darkgrey; /* Cor do link ao passar o mouse */
+    color: darkgrey; 
 }
 
-/* Estilo da grid de cartões */
 .card-grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas de largura igual */
-    gap: 20px; /* Espaço (vão) entre as colunas do grid */
-    width: 100%; /* Ajusta a largura do grid para ocupar toda a largura disponível */
-    max-width: 1300px; /* Define a largura máxima do grid */
-    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 100%; 
+    max-width: 1300px; 
+    box-sizing: border-box; 
 }
 
-/* Estilo dos cartões individuais */
+
 .card {
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgb(55, 85, 110); /* Adiciona uma sombra */
+    box-shadow: 0 4px 8px rgb(55, 85, 110); 
     overflow: hidden;
     transition: transform 0.3s;
     display: flex;
-    flex-direction: column; /* Garante que o conteúdo do cartão flua verticalmente */
-    justify-content: center; /* Centraliza o conteúdo do cartão horizontalmente */
-    align-items: center; /* Centraliza o conteúdo do cartão verticalmente */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Estilo das imagens dos cartões */
 .card img {
-    width: 200px; /* Define a largura fixa da imagem */
-    height: 200px; /* Define a altura fixa da imagem */
-    object-fit: cover; /* Faz com que a imagem cubra o container mantendo a proporção */
+
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
     display: block;
 }
 
-/* Estilo do conteúdo dentro do cartão */
 .card-content {
     padding: 15px;
     text-align: center;
 }
 
-/* Estilo do título dentro do conteúdo do cartão */
 .card-content h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Estilo do texto dentro do conteúdo do cartão */
 .card-content p {
     font-size: 1em;
     color: #666;
 }
 
-/* Estilo do botão dentro do conteúdo do cartão */
 .card-content .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #007bff;
+    background-color: #424242;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Estilo do botão ao passar o mouse */
 .card-content .btn:hover {
-    background-color: #0056b3;
+    background-color: #8d8c8c;
     transform: translateY(-2px);
 }
 
-/* Estilo do cartão ao passar o mouse */
 .card:hover {
     transform: translateY(-5px);
+}
+
+img {
+    border-radius: 40px
+    
+}
+.banner {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.banner img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.btn-ver-mais {
+    position: absolute;
+    bottom: 45px;
+    background-color: #ffffff80;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+    background-color: #ffffff4d;
 }
