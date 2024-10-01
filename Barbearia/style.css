@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+} 
+
+header{
+    width: 100%;   
+} 
+
+.cabecalho-conteudo{ 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}  
+
+i{
+    color: #fff;
+} 
+
+.cabecalho-icones{
+    display: flex;
+    gap: 14px;
+}  
+
+.bg-home::before{
+    background-image: url(imagens/bg.svg);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    z-index: -1;
+    position: absolute;
+    content: "";
+}
+
+.cabecalho-botao{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: transparent;   
+}
+
+.cabecalho-botao:hover{
+    background-color: rgb(4,175,24);
+    border: 1px solid rgb(4,175,24);
+}
+a:hover{
+    color: black;
+}
