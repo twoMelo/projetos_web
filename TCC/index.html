@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iNovaTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contato.html">Especificações</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="carousel">
+    <div class="custom-video-controls">
+        <video class="videoPlayer" id="video1" autoplay muted>
+            <source src="video/banner1.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="volume-control">
+            <i class="fas fa-volume-up" id="volumeIcon"></i>
+        </div>
+    </div>
+
+    <div class="progress-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    const videoPlayer = document.getElementById("video1");
+    const dots = document.querySelectorAll(".dot");
+    let slideIndex = 1;
+    const videos = [
+        "video/banner1.mp4",
+        "video/banner2.mp4",
+        "video/banner3.mp4",
+    ];
+
+    function showSlides(n) {
+        if (n > videos.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = videos.length; }
+
+        // Adiciona a animação de transição
+        videoPlayer.classList.add('fade');
+        
+        // Troca a fonte do vídeo
+        videoPlayer.src = videos[slideIndex - 1];
+        videoPlayer.load();
+        videoPlayer.play();
+
+        // Atualiza os pontos ativos
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[slideIndex - 1].classList.add("active");
+
+        // Remove a animação após um pequeno delay
+        setTimeout(() => {
+            videoPlayer.classList.remove('fade');
+        }, 300); // Tempo deve ser igual ao tempo da transição
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex > videos.length) { slideIndex = 1; }
+        if (slideIndex < 1) { slideIndex = videos.length; }
+        showSlides(slideIndex);
+    }
+
+    function currentSlide(n) {
+        slideIndex = n;
+        showSlides(slideIndex);
+    }
+
+    videoPlayer.addEventListener("ended", () => {
+        slideIndex++;
+        if (slideIndex > videos.length) {
+            slideIndex = 1;
+        }
+        showSlides(slideIndex);
+    });
+
+    showSlides(slideIndex);
+</script>
+</body>
+</html>

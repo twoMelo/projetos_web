@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(58, 58, 58, 0.295); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgba(58, 58, 58, 0); 
+    color: white;
+    display: flex;
+    align-items: center; 
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+nav {
+    flex: 1;
+}
+
+ul {
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    color: white; 
+    padding-right: 20px;
+}
+
+nav li a {
+    color: white; 
+    text-decoration: none; 
+}
+
+nav li a:hover {
+    color: darkgrey; 
+}
+
+.carousel {
+    position: relative;
+    width: 1300px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease; /* Transição suave */
+    opacity: 1; /* Inicia completamente visível */
+}
+
+.fade {
+    opacity: 0; /* Inicia invisível durante a troca */
+}
+
+.progress-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 5px;
+    background-color: #858585;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, width 0.3s ease; /* Transição suave */
+}
+
+.dot.active {
+    width: 40px;
+    background-color: #686868;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.custom-video-controls {
+    display: flex;
+    justify-content: center;  
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar o controle de volume dentro */
+}
+
+.volume-control {
+    position: absolute;
+    bottom: 10px; /* Coloca o ícone na parte inferior do vídeo */
+    right: 10px;
+    opacity: 0; /* Inicialmente escondido */
+    transition: opacity 0.3s;
+}
+
+/* Torna visível ao passar o mouse */
+.custom-video-controls:hover .volume-control {
+    opacity: 1; 
+}
+
+.volume-control i {
+    color: rgb(138, 138, 138);
+    font-size: 24px; /* Tamanho do ícone de volume */
+}
