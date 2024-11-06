@@ -2,25 +2,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: rgba(58, 58, 58, 0.295); 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    font-family: sans-serif;
+    
 }
 
 header {
-    background-color: rgba(58, 58, 58, 0); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    background-color: rgb(0, 0, 0); 
     color: white;
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding: 10px 20px;
-    width: 100%;
-    margin-bottom: 50px;
+    font-family: Itim;
 }
+body {
+    background-color: rgba(0, 0, 0, 0.295); 
+    display: flex;
+    flex-direction: column; 
+    font-family: sans-serif;
+}
+.cabecalho-icones{
+    display: flex;
+    gap: 10px;   
+}
+
+i{
+    color: rgb(255, 255, 255);
+}
+
+.s1{
+    color: #000000;
+}
+
+.price{
+    font-family: 'quicksand';
+    color: rgb(51, 51, 51);
+}
+
+.int{
+    font-family: 'quicksand';
+    color: rgb(51, 51, 51);
+}
+
+i:hover{
+    color: #686868;
+}
+.sobre{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.sobre-conteudo{
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+}
+.tittle{
+    font-size: 80px;
+    justify-content: center;
+    display: flex;
+}
+.descrição{
+    margin-left: 0px;
+}
+.tittleh2{
+    font-size: 120px;
+    font-family: 'roboto';
+}
+.produtos{
+    position: relative;
+    width: 1500px;
+    justify-content: center;
+    display: block;
+    margin: 0 auto; /* VIDEO AO MEIO */
+}
+
+
 
 nav {
     flex: 1;
@@ -51,18 +112,22 @@ nav li a:hover {
 
 .carousel {
     position: relative;
-    width: 1300px;
+    width: 1500px;
+    justify-content: center;
+    display: block;
+    margin: 0 auto; /* VIDEO AO MEIO */
+    margin-top: 150px;
 }
 
 video {
     width: 100%;
     border-radius: 10px;
-    transition: opacity 0.3s ease; /* Transição suave */
-    opacity: 1; /* Inicia completamente visível */
+    transition: opacity 0.3s ease; /* TRANSIÇÃO SUAVE */
+    opacity: 1; /* INICIA COMPLETAMENTE VISÍVEL */
 }
 
 .fade {
-    opacity: 0; /* Inicia invisível durante a troca */
+    opacity: 0; /* INICIA INVISÍVEL DURANTE A TROCA */
 }
 
 .progress-dots {
@@ -78,7 +143,7 @@ video {
     background-color: #858585;
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s ease, width 0.3s ease; /* Transição suave */
+    transition: background-color 0.3s ease, width 0.3s ease; /* TRANSIÇÃO SUAVE */
 }
 
 .dot.active {
@@ -121,23 +186,64 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* Para posicionar o controle de volume dentro */
+    position: relative; /* PARA POSICIONAR O CONTROLE DE VOLUME DENTRO */
 }
 
 .volume-control {
     position: absolute;
-    bottom: 10px; /* Coloca o ícone na parte inferior do vídeo */
+    bottom: 10px; /* COLOCA O ÍCONE NA PARTE INFERIOR DO VÍDEO */
     right: 10px;
-    opacity: 0; /* Inicialmente escondido */
+    opacity: 0; /* INICIALMENTE ESCONDIDO */
     transition: opacity 0.3s;
 }
 
-/* Torna visível ao passar o mouse */
+/* TORNA VISÍVEL AO PASSAR O MOUSE */
 .custom-video-controls:hover .volume-control {
     opacity: 1; 
 }
 
 .volume-control i {
     color: rgb(138, 138, 138);
-    font-size: 24px; /* Tamanho do ícone de volume */
+    font-size: 24px; /* TAMANHO DO ÍCONE DE VOLUME */
+}
+footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-nav a:hover {
+    color: #686868;
 }

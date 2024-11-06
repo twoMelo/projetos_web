@@ -6,15 +6,36 @@
     <title>iNovaTech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+    </style>   
 </head>
 <body>
 <header>
+    <div class="logo">
+        <img src="imagem/logo.png" alt="Logo" width="100" height="100">
+    </div>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Especificações</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
             <li><a href="sobre.html">Sobre Nós</a></li>
         </ul>
+    </nav>
+
+        <div class="cabecalho-icones">
+            <a href="https://www.instagram.com/senaisuzano">
+            <i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="https://www.facebook.com/senaisp.suzano">
+            <i class="fa-brands fa-facebook fa-2x"></i></a>
+            <a href="https://www.tiktok.com/tag/senai">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+        </div>
     </nav>
 </header>
 
@@ -38,6 +59,27 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+<section class="sobre">
+    <div class="sobre-conteudo container">
+    </div>
+    <div class="sobre-descricao">
+        <div class="sobre-descricao">
+            <h2 class="tittleh2"><strong>Superfino. Superleve. <br>Superchip M3.</strong></h2>
+            <p class="int"><strong class="s1">O MacBook Air</strong> arrasa tanto no trabalho quanto na diversão, e o <strong class="s1">chip M3</strong> traz recursos ainda melhores para o notebook mais<br> popular do mundo. São até 18 horas de bateria2 para você levar o MacBook Air para todo lugar e voar em qualquer tarefa.</p>
+            <br>
+            <p class="price"><strong>MacBook Air com chip M3 a partir de R$ 1.166,58/mês ou 13.999*</strong></p>
+            <p class="price"><strong>MacBook Air com chip M2 a partir de R$ 1.041,58/mês ou  12.499*</strong></p>
+    </div>
+    
+</section>
+<p class="descrição">DESIGN PORTÁTIL</p>
+<section>
+    
+     <div>
+        <h2 class="tittle">Feito para acompanhar você.</h2>
+        <img class="produtos"src="imagem/mac.png" alt="Imagem Mac">
+    </div>
+</section>
 
 <script>
     const videoPlayer = document.getElementById("video1");
@@ -93,5 +135,12 @@
 
     showSlides(slideIndex);
 </script>
+<footer>
+    <div class="footer-content">
+        <p>© 2024 iNovaTech - Todos os direitos reservados.</p>
+        
+    </div>
+</footer>
 </body>
+
 </html>
